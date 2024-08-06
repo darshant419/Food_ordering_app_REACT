@@ -34,8 +34,8 @@ export function NavbarOne() {
    
 
     return (
-        <div className="relative w-full h-15 bg-transparent rounded">
-            <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
+        <div className="relative w-full h-20 bg-transparent rounded top-3 ">
+            <div className="mx-auto flex max-w-8xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8 align-center">
                 <div className="inline-flex items-center space-x-2 font-bold">
                     <span>
                         Logo

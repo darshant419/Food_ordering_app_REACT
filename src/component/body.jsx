@@ -50,10 +50,10 @@ function BodyEle() {
     return listofResturant.length === 0 ? <Shimmer /> : (
 
         <>
-            <div className='flex align-center  justify-around flex-wrap align-center mt-5 mx-[100px]'>
+            <div className=' align-center flex justify-between  flex-wrap sm:align-center sm:mt-5 mx-[100px] sm:g-5 '>
                 <div className="flex grow ">
                     <input
-                        className="flex h-10 w-[250px] border-neutral-900 rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex h-10 w-[250px] border-neutral-900 rounded-md bg-gray-100 px-3 py-2 text-sm placeholder:text-gray-600 focus:outline-none focus:ring-1 focus:ring-black/30 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50 "
                         type="text"
                         value={searchText}
                         onChange={(e) => {
@@ -81,7 +81,7 @@ function BodyEle() {
 
                 }
                     type="button"
-                    className=" rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black relative  "
+                    className=" rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black relative flex justify-center align-center"
                 >Top Rated Restaurants
                 </button>
 

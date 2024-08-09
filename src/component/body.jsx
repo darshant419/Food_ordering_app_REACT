@@ -29,7 +29,7 @@ function BodyEle() {
 
         const json = await data.json();
 
-        console.log(json);
+        // console.log(json);
         //optional chaing
         setlistofRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         setfilteredRestaurant(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
@@ -65,7 +65,7 @@ function BodyEle() {
                         onClick={() => {
 
                             const filteredName = listofResturant.filter((res) => res?.info?.name.toLowerCase().includes(searchText.toLowerCase()));
-                            console.log(filteredName)
+                            // console.log(filteredName)
                             setfilteredRestaurant(filteredName)
 
                         }}

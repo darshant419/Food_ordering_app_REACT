@@ -1,4 +1,4 @@
-
+import UserClass from "./ClassCompo";
 
 const AboutUs = () => {
 
@@ -6,10 +6,11 @@ const AboutUs = () => {
 
         <>
 
-
-        <h1 className="text-4xl font-bold text-center  ">
+        <h1 className="text-4xl font-bold text-center">
             THis is About us page
         </h1>
+
+        <UserClass name={"Darshan, this is class based component"}/>
         </>
 
     );

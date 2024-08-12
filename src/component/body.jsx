@@ -3,12 +3,13 @@ import { useEffect, useState } from 'react';
 import { RestaurantCard } from './restauraent'
 import Shimmer from './Shimmer';
 import { Link } from "react-router-dom"
+import useOnlineStatus from './Utils/useOnlineStatus';
 
 
 
 
 function BodyEle() {
-    console.log("i am body ele");
+    // console.log("i am body ele");
     const [listofResturant, setlistofRestaurant] = useState([]);
     const [filteredRestaurant, setfilteredRestaurant] = useState([]);
     const [searchText, setSearchText] = useState("");
@@ -17,17 +18,14 @@ function BodyEle() {
 
     useEffect(() => {
         fetchData();
-        console.log("i am useEffect");
+        // console.log("i am useEffect");
     }, []);
 
 
 
     const fetchData = async () => {
 
-
-
         const data = await fetch("https://thingproxy.freeboard.io/fetch/https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.96340&lng=77.58550&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
-
         const json = await data.json();
 
         // console.log(json);
@@ -45,6 +43,10 @@ function BodyEle() {
     //       </>
     //     )
     //    }
+
+const OnlineStatus = useOnlineStatus();
+
+if (OnlineStatus === false) return <h1 className='text-center text-3xl mt-5'>Looks like you are offline,🔌 please check your internet connection!!! 🛜</h1>
 
 
     //conditional rendring in return statement

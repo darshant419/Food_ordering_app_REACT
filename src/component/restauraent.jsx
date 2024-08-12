@@ -10,7 +10,7 @@ export function RestaurantCard({ resData }) {
    
 
 
-      <div className="w-[300px] rounded-md border m-6 hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-lg hover:shadow-gray-400 ">
+      <div className="w-[300px] rounded-md border m-6 hover:cursor-pointer transition-all duration-300 hover:scale-95 hover:shadow-lg hover:shadow-gray-400 h-[350px] overflow-hidden">
         <img
             src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}
             alt="card"

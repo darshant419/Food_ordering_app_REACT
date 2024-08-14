@@ -1,14 +1,17 @@
-import React from 'react'
+import React,{lazy,Suspense} from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css';
 import BodyEle from './component/body';
-import AboutUs from './component/AboutUs';
+// import AboutUs from './component/AboutUs';
 import Contact from './component/ContactUs.jsx';
 import Error from './component/Error.jsx';
 import RestoMenu from './component/RestoMenu.jsx';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
+const AboutUs = lazy(()=>import("./component/AboutUs") 
+)
 
 const appRouter = createBrowserRouter([
   {
@@ -24,7 +27,7 @@ const appRouter = createBrowserRouter([
       },
       {
       path: "/AboutUs",
-      element: <AboutUs />,
+      element: <Suspense fallback = {"this is fallback...."} ><AboutUs /></Suspense> ,
 
     },
     {
